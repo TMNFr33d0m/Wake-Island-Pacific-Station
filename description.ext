@@ -1,15 +1,12 @@
-Author = "2ABCT S-4"; 
-loadScreen =  "images\Loadimg.jpg";
-OnLoadName = "2ABCT Pacific Station";
-onLoadMission = "Questions / Concerns? Email info@a3milsim.com";
+Author = "Cody Salazar AKA Fr33d0m"; 
+loadScreen =  "images\LoadImg_Wips.paa";
+OnLoadName = "W.I.P.S.";
+onLoadMission = "Questions / Concerns? Email salazar@a3milsim.com";
 
 respawn = 3;
-respawnDelay = 120;
-respawnDialog = 1;
-respawnTemplatesWest[] = {"Spectator"};
+respawnDelay = 10;
 disabledAI = 1;
 enableDebugConsole = 1;
-showMap = 1;
 scriptedPlayer = 1;
 corpseManagerMode = 1;
 corpseLimit = 1;
@@ -19,37 +16,129 @@ wreckManagerMode = 1;
 wreckLimit = 1;
 wreckRemovalMinTime = 60; //seconds
 wreckRemovalMaxTime = 1200; //seconds
-forceRotorLibSimulation = 1; 
 
 
-class Header
-{
+class Header{
     gameType = RPG;
     minPlayers = 1; 
-    maxPlayers = 40;
+    maxPlayers = 60;
 };
 
-
-disableChannels[]={0,1,2,3,6};
-
-
-#include "VAS\menu.hpp"
 #include "dialog\MenuNormals.hpp" 
-#include "dialog\2ABCT_Armory.hpp"
-#include "dialog\2ABCT_M4R.hpp"
+#include "dialog\A3M_Armory.hpp"
+#include "dialog\A3M_M4R.hpp"
 #include "R3F_LOG\desc_include.h"	
 
-class CfgFunctions
-{
-    #include "VAS\cfgfunctions.hpp"
-};
-
+// Rank Structure
+ 
 class CfgUnitInsignia
 {
-	class 2ABCT_Flash
-	{
-		displayName = "[2ABCT] Unit Flash"; // Name displayed in Arsenal
+	class A3M_PFC	{
+		displayName = "[A3M] Private 1st Class"; // Name displayed in Arsenal
 		author = "Cody Salazar"; // Author displayed in Arsenal
-		texture = "images\2ABCT_Flash.paa"; // Image path
+		texture = "images\Ranks\PVT_Rank.paa"; // Image path
+	};
+	
+	class A3M_SPC	{
+		displayName = "[A3M] Specialist "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\SPC_Rank.paa"; // Image path
+	};
+	
+	class A3M_CPL	{
+		displayName = "[A3M] Corporal "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CPL_Rank.paa"; // Image path
+	};
+	
+	class A3M_SGT	{
+		displayName = "[A3M] Sergeant "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\SGT_Rank.paa"; // Image path
+	};
+	
+	class A3M_SSG	{
+		displayName = "[A3M] Staff Sergeant "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\SSG_Rank.paa"; // Image path
+	};
+	
+	class A3M_SFC	{
+		displayName = "[A3M] Sergeant First Class"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\SFC_Rank.paa"; // Image path
+	};
+	
+	class A3M_MSG	{
+		displayName = "[A3M] Master Sergeant "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\MSG_Rank.paa"; // Image path
+	};
+	
+	class A3M_1SG	{
+		displayName = "[A3M] First Sergeant "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\SGM_Rank.paa"; // Image path
+	};
+	
+	class A3M_W01	{
+		displayName = "[A3M] Warrant Officer (W01) "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\W01_Rank.paa"; // Image path
+	};
+	
+	class A3M_CW2	{
+		displayName = "[A3M] Chief Warrant Officer (CW2)  "; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CW2_Rank.paa"; // Image path
+	};
+	
+	class A3M_CW3	{
+		displayName = "[A3M] Chief Warrant Officer (CW3)"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CW3_Rank.paa"; // Image path
+	};
+	
+	class A3M_CW4	{
+		displayName = "[A3M] Chief Warrant Officer (CW4)"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CW4_Rank.paa"; // Image path
+	};
+
+	class A3M_CW5	{
+		displayName = "[A3M] Chief Warrant Officer (CW5)"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CW5_Rank.paa"; // Image path
+	};
+	
+	class A3M_2LT	{
+		displayName = "[A3M] Second Lieutenant"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\LT_Rank.paa"; // Image path
+	};
+
+	class A3M_1LT	{
+		displayName = "[A3M] First Lieutenant"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\1LT_Rank.paa"; // Image path
+	};
+	
+	class A3M_CPT	{
+		displayName = "[A3M] Captain"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\CPT_Rank.paa"; // Image path
+	};	
+	
+	
+	class A3M_MAJ	{
+		displayName = "[A3M] Major"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\MAJ_Rank.paa"; // Image path
+	};
+	
+	class A3M_LTC	{
+		displayName = "[A3M] Lieutenant Colonel"; // Name displayed in Arsenal
+		author = "Cody Salazar"; // Author displayed in Arsenal
+		texture = "images\Ranks\LTC_Rank.paa"; // Image path
 	};
 };

@@ -15,6 +15,9 @@ execVM "scripts\AutoRifleRange.sqf";
 execVM "scripts\M4RR.sqf";
 execVM "scripts\SH2.sqf"; 
 
+// Anti-Faggotry Script
+//execVM "scripts\grenadeStop.sqf"; 
+
 /*
 [] spawn {
 while{not isnull APC} do {"MHQMK" setmarkerpos getpos APC; sleep 0.5;};
@@ -39,10 +42,9 @@ nopop=true;
 [getMarkerPos "Base","Wake Island Pacific Station",300,200,180,0,[]] spawn BIS_fnc_establishingShot;
 waitUntil {player == player}; 
 
-[player] execVM "loadouts\Garrison.sqf"; 
+// [player] execVM "loadouts\Garrison.sqf"; 
 sleep 10; 
-
-removeBackpack player; 
+execVM "scripts\Rank_Structure.sqf"; 
 sleep 1; 
-
-hint format ["Welcome to Wake Island! \n Wake Island is the current peacetime station of the U.S. Army 2nd Armored Brigade Combat Team. \n \n General Communications: \n \n Radio Channel 76 \n \n Please remember to observe all 2nd ABCT rules and regulations while on the Wake Island Pacific Station server. "]; 
+removeBackpack player; 
+hint format ["Welcome to Wake Island! \n Wake Island Pacific Station is a Department Of Defense owned joint base dedicated to training. Soldiers garrisoned here can participate in all aspects of training to improve skill."]; 
